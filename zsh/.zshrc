@@ -4,9 +4,6 @@ export DOTFILES=$HOME/.dotfiles
 # your project folder that we can `c [tab]` to
 export PROJECTS=~/dev
 
-# source every .zsh file in this rep
-for config_file ($DOTFILES/**/*.zsh) source $config_file
-
 # use .localrc for SUPER SECRET CRAP that you don't
 # want in your public, versioned repo.
 if [[ -a ~/.localrc ]]
