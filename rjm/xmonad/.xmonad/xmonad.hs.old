@@ -1,0 +1,30 @@
+import XMonad
+import XMonad.Hooks.ManageDocks
+import XMonad.Hooks.DynamicLog
+import XMonad.Util.Run(spawnPipe)
+import XMonad.Util.EZConfig
+import XMonad.Hooks.SetWMName
+import System.IO
+import qualified XMonad.StackSet as W
+
+main = do
+  xmproc <- spawnPipe "/usr/bin/xmobar /home/owen/.xmonad/.xmobarrc"
+  xmonad $ defaultConfig
+    { manageHook = manageDocks <+> manageHook defaultConfig
+    , layoutHook = avoidStruts  $  layoutHook defaultConfig
+    , logHook = dynamicLogWithPP xmobarPP
+      { ppOutput = hPutStrLn xmproc
+        , ppTitle = xmobarColor "green" "" . shorten 50
+      }
+    , modMask = mod4Mask     -- Rebind Mod to the Windows key
+    , startupHook = setWMName "LG3D" 
+    } `additionalKeysP` myKeys
+
+modm = mod4Mask
+
+myKeys = 
+  [ (mask ++ "M-" ++ [key], screenWorkspace scr >>= flip whenJust (windows . action))
+  | (key, scr)  <- zip "wer" [1,0,2] -- was [0..] *** change to match your screen order ***
+  , (action, mask) <- [ (W.view, "") , (W.shift, "S-")]
+  , ((modm .|. controlMask, xK_l     ), spawn "/home/owen/bin/lock.sh")
+  ]
