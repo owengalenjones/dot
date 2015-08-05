@@ -1,1 +1,0 @@
-export COOL=very nice
