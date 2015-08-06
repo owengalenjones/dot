@@ -50,6 +50,7 @@ Plugin 'OmniSharp/omnisharp-vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-dispatch'
 Plugin 'mxw/vim-jsx'
+Plugin 'unblevable/quick-scope'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
