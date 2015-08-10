@@ -39,7 +39,6 @@ Plugin 'tpope/vim-speeddating'
 Plugin 'vim-scripts/paredit.vim'
 Plugin 'mtth/scratch.vim'
 Plugin 'leafgarland/typescript-vim'
-Plugin 'jason0x43/vim-js-indent'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-bundler'
 Plugin 'sheerun/vim-polyglot'
@@ -50,6 +49,8 @@ Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-dispatch'
 Plugin 'mxw/vim-jsx'
 Plugin 'unblevable/quick-scope'
+Plugin 'pangloss/vim-javascript'
+Plugin 'sheerun/vim-polyglot'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -67,6 +68,9 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 "
+
+"polyglot
+let g:polyglot_disabled =['javascript']
 
 "nerd tree
 map <Leader>n :NERDTreeToggle<CR>
