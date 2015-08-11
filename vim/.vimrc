@@ -51,6 +51,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'unblevable/quick-scope'
 Plugin 'pangloss/vim-javascript'
 Plugin 'sheerun/vim-polyglot'
+Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -77,13 +78,14 @@ map <Leader>n :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1 " show hidden files
 map <leader>m :NERDTreeFind<CR> " find the current file in NerdTree
 
+"colors
 "solarized
-set background=dark
+"set background=dark
 "colorscheme solarized
-
 "molokai
-colorscheme molokai
-let g:molokai_original = 1
+"colorscheme molokai
+"let g:molokai_original = 1
+colorscheme dracula
 
 "numbers
 let g:numbers_exclude = ['tagbar', 'gundo', 'minibufexpl', 'nerdtree']
