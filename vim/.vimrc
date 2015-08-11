@@ -29,8 +29,7 @@ Plugin 'jaxbot/browserlink.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'jceb/vim-orgmode'
 Plugin 'vim-scripts/utl.vim'
-Plugin 'vim-scripts/taglist.vim'
-Plugin 'majutsushi/tagbar'
+"Plugin 'vim-scripts/taglist.vim'
 Plugin 'chrisbra/NrrwRgn'
 Plugin 'vim-scripts/calendar.vim'
 Plugin 'vim-scripts/SyntaxRange'
@@ -49,7 +48,11 @@ Plugin 'tpope/vim-dispatch'
 Plugin 'mxw/vim-jsx'
 Plugin 'unblevable/quick-scope'
 Plugin 'pangloss/vim-javascript'
-Plugin 'sheerun/vim-polyglot'
+Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+Plugin 'majutsushi/tagbar'
+Plugin 'vim-php/phpctags'
+Plugin 'vim-scripts/tagbar-phpctags'
+Plugin 'marijnh/tern_for_vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -76,13 +79,14 @@ map <Leader>n :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1 " show hidden files
 map <leader>m :NERDTreeFind<CR> " find the current file in NerdTree
 
+"colors
 "solarized
-set background=dark
+"set background=dark
 "colorscheme solarized
-
 "molokai
-colorscheme molokai
-let g:molokai_original = 1
+"colorscheme molokai
+"let g:molokai_original = 1
+colorscheme dracula
 
 "numbers
 let g:numbers_exclude = ['tagbar', 'gundo', 'minibufexpl', 'nerdtree']
@@ -336,3 +340,7 @@ set hidden
 " react
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 let g:syntastic_javascript_checkers = ['eslint']
+
+"tagbar
+nmap <F8> :TagbarToggle<CR>
+let g:tagbar_phpctags_bin='~/.vim/bundle/phpctags/bin/phpctags'
