@@ -1,76 +1,64 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-"
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+function! BuildYCM(info)
+  " info is a dictionary with 3 fields
+  " - name:   name of the plugin
+  " - status: 'installed', 'updated', or 'unchanged'
+  " - force:  set on PlugInstall! or PlugUpdate!
+  if a:info.status == 'installed' || a:info.force
+    !./install.py
+  endif
+endfunction
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+call plug#begin('~/.vim/plugged')
+Plug 'altercation/vim-colors-solarized'
+Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+Plug 'myusuf3/numbers.vim'
+Plug 'fholgado/minibufexpl.vim'
+Plug 'kien/ctrlp.vim'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'scrooloose/nerdtree'
+Plug 'kien/rainbow_parentheses.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'kchmck/vim-coffee-script'
+Plug 'tpope/vim-fireplace'
+Plug 'tpope/vim-leiningen'
+Plug 'mileszs/ack.vim'
+Plug 'tomasr/molokai'
+Plug 'jaxbot/browserlink.vim'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'jceb/vim-orgmode'
+Plug 'vim-scripts/utl.vim'
+"Plun 'vim-scripts/taglist.vim'
+Plug 'chrisbra/NrrwRgn'
+Plug 'vim-scripts/calendar.vim'
+Plug 'vim-scripts/SyntaxRange'
+Plug 'tpope/vim-speeddating'
+"Plun 'tpope/vim-endwise' screws up paredit electric return
+Plug 'vim-scripts/paredit.vim'
+Plug 'mtth/scratch.vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-bundler'
+Plug 'sheerun/vim-polyglot'
+Plug 'guns/vim-clojure-static'
+Plug 'guns/vim-clojure-highlight'
+Plug 'OmniSharp/omnisharp-vim'
+Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-dispatch'
+Plug 'mxw/vim-jsx'
+Plug 'unblevable/quick-scope'
+Plug 'pangloss/vim-javascript'
+Plug 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+Plug 'majutsushi/tagbar'
+Plug 'vim-php/phpctags'
+Plug 'vim-scripts/tagbar-phpctags'
+Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }
+call plug#end()
 
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'myusuf3/numbers.vim'
-Plugin 'fholgado/minibufexpl.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'scrooloose/nerdtree'
-Plugin 'kien/rainbow_parentheses.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'tpope/vim-fireplace'
-Plugin 'tpope/vim-leiningen'
-Plugin 'mileszs/ack.vim'
-Plugin 'tomasr/molokai'
-Plugin 'jaxbot/browserlink.vim'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'jceb/vim-orgmode'
-Plugin 'vim-scripts/utl.vim'
-"Plugin 'vim-scripts/taglist.vim'
-Plugin 'chrisbra/NrrwRgn'
-Plugin 'vim-scripts/calendar.vim'
-Plugin 'vim-scripts/SyntaxRange'
-Plugin 'tpope/vim-speeddating'
-"Plugin 'tpope/vim-endwise' screws up paredit electric return
-Plugin 'vim-scripts/paredit.vim'
-Plugin 'mtth/scratch.vim'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-bundler'
-Plugin 'sheerun/vim-polyglot'
-Plugin 'guns/vim-clojure-static'
-Plugin 'guns/vim-clojure-highlight'
-Plugin 'OmniSharp/omnisharp-vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'tpope/vim-dispatch'
-Plugin 'mxw/vim-jsx'
-Plugin 'unblevable/quick-scope'
-Plugin 'pangloss/vim-javascript'
-Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
-Plugin 'majutsushi/tagbar'
-Plugin 'vim-php/phpctags'
-Plugin 'vim-scripts/tagbar-phpctags'
-Plugin 'marijnh/tern_for_vim'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
 syntax enable
 filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-"
 
 "polyglot
 let g:polyglot_disabled =['javascript']
