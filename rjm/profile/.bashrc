@@ -121,6 +121,3 @@ eval "$(rbenv init -)"
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
-
-# decrypt and exports variables
-`gpg -d .secrets.gpg`
