@@ -53,5 +53,15 @@ source "`brew --prefix`/etc/grc.bashrc"
 if [ -f `brew --prefix`/etc/autojump ]; then
   . `brew --prefix`/etc/autojump
 fi
+
 export LEIN_GPG=/usr/local/MacGPG2/bin/gpg2
 alias start-pg='postgres -D /usr/local/var/postgres'
+
+if [ -d "$HOME/.sourceable" ] ; then
+  FILES="$HOME/.sourceable/*"
+  for f in $FILES
+  do
+    echo "sourcing $f"
+    source $f
+  done
+fi
