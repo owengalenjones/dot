@@ -75,6 +75,7 @@ map <leader>m :NERDTreeFind<CR> " find the current file in NerdTree
 "molokai
 "colorscheme molokai
 "let g:molokai_original = 1
+set t_Co=256
 colorscheme dracula
 
 "numbers
