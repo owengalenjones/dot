@@ -44,12 +44,10 @@ ZSH_THEME="blinks"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(ruby git textmate bundler brew gem osx rails rbenv autojump)
+plugins=(ruby gitfast textmate bundler brew gem osx rails rbenv autojump aws bower gpg-agent jsontools meteor node npm)
 
 source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
-source "`brew --prefix`/etc/grc.bashrc"
-
 if [ -f `brew --prefix`/etc/autojump ]; then
   . `brew --prefix`/etc/autojump
 fi
