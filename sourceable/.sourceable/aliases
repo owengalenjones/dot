@@ -1,0 +1,2 @@
+alias gfo='git fetch origin'
+alias gs='git status'

@@ -121,3 +121,12 @@ eval "$(rbenv init -)"
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
+
+if [ -d "$HOME/.sourceable" ] ; then
+  FILES="$HOME/.sourceable/*"
+  for f in $FILES
+  do
+    echo "sourcing $f"
+    source $f
+  done
+fi
