@@ -24,6 +24,3 @@ eval $(gpg-agent --daemon)
 
 ~/.screenlayout/layout.sh
 #~/.dropbox-dist/dropboxd
-
-# decrypt and exports variables
-`gpg -d .secrets.gpg`

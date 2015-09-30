@@ -130,3 +130,6 @@ if [ -d "$HOME/.sourceable" ] ; then
     source $f
   done
 fi
+
+# decrypt and exports variables
+`gpg -d .secrets.gpg`
