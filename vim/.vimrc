@@ -48,7 +48,7 @@ Plug 'OmniSharp/omnisharp-vim'
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-dispatch'
 Plug 'mxw/vim-jsx'
-Plug 'unblevable/quick-scope'
+"Plug 'unblevable/quick-scope'
 Plug 'pangloss/vim-javascript'
 Plug 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 Plug 'majutsushi/tagbar'
