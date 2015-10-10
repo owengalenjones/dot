@@ -56,9 +56,7 @@ export LEIN_GPG=/usr/local/MacGPG2/bin/gpg2
 alias start-pg='postgres -D /usr/local/var/postgres'
 
 if [ -d "$HOME/.sourceable" ] ; then
-  FILES="$HOME/.sourceable/*"
-  for f in $FILES
-  do
+  for f in $HOME/.sourceable/*; do
     echo "sourcing $f"
     source $f
   done
