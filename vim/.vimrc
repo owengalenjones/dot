@@ -55,6 +55,7 @@ Plug 'majutsushi/tagbar'
 Plug 'vim-php/phpctags'
 Plug 'vim-scripts/tagbar-phpctags'
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }
+Plug 'junegunn/vim-easy-align'
 call plug#end()
 
 syntax enable
