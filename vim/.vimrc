@@ -36,7 +36,7 @@ Plug 'vim-scripts/calendar.vim'
 Plug 'vim-scripts/SyntaxRange'
 Plug 'tpope/vim-speeddating'
 "Plun 'tpope/vim-endwise' screws up paredit electric return
-Plug 'vim-scripts/paredit.vim'
+"Plug 'vim-scripts/paredit.vim'
 Plug 'mtth/scratch.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'tpope/vim-rails'
@@ -56,6 +56,10 @@ Plug 'vim-php/phpctags'
 Plug 'vim-scripts/tagbar-phpctags'
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }
 Plug 'junegunn/vim-easy-align'
+Plug 'tpope/vim-sexp-mappings-for-regular-people'
+Plug 'guns/vim-sexp'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
 call plug#end()
 
 syntax enable
