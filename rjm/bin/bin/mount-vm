@@ -1,1 +1,1 @@
-sshfs core:/opt/code /home/owen/dev/vm
+sshfs core:/opt/code /opt/code
