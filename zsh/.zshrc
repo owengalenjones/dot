@@ -53,7 +53,6 @@ if [ -f `brew --prefix`/etc/autojump ]; then
 fi
 
 export LEIN_GPG=/usr/local/MacGPG2/bin/gpg2
-alias start-pg='postgres -D /usr/local/var/postgres'
 
 if [ -d "$HOME/.sourceable" ] ; then
   for f in $HOME/.sourceable/*; do
@@ -61,3 +60,4 @@ if [ -d "$HOME/.sourceable" ] ; then
     source $f
   done
 fi
+export PATH=/usr/local/opt/rbenv/shims:/usr/local/opt/rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/MacGPG2/bin
