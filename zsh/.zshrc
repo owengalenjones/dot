@@ -37,14 +37,14 @@ ZSH_THEME="blinks"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 # COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(ruby gitfast textmate bundler brew gem osx rails rbenv autojump aws bower gpg-agent jsontools meteor node npm)
+plugins=(ruby gitfast textmate brew gem osx rails rbenv autojump aws bower gpg-agent jsontools meteor node npm)
 
 source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
