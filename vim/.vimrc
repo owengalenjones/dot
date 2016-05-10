@@ -191,7 +191,7 @@ let g:indent_guides_space_guides = 1
 let g:ctrlp_max_files = 0
 let g:ctrlp_max_depth = 30
 let g:ctrlp_regexp = 1 " default to regexp search
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:ctrlp_custom_ignore = 'bower_componenets\|node_modules\|DS_Store\|git'
 
 "paredit
 let g:paredit_leader = '\'
