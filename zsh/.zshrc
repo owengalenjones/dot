@@ -44,7 +44,7 @@ DISABLE_AUTO_TITLE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(ruby gitfast textmate brew gem osx rails rbenv autojump aws bower gpg-agent jsontools meteor node npm)
+plugins=(ruby gitfast textmate brew gem osx rails rbenv autojump aws gpg-agent jsontools meteor node npm)
 
 source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
