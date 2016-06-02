@@ -55,11 +55,13 @@ Plug 'majutsushi/tagbar'
 Plug 'vim-php/phpctags'
 Plug 'vim-scripts/tagbar-phpctags'
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }
-Plug 'junegunn/vim-easy-align'
+"Plug 'junegunn/vim-easy-align'
+Plug 'godlygeek/tabular'
 Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'guns/vim-sexp'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
+Plug 'mattn/emmet-vim'
 call plug#end()
 
 syntax enable
@@ -191,7 +193,7 @@ let g:indent_guides_space_guides = 1
 let g:ctrlp_max_files = 0
 let g:ctrlp_max_depth = 30
 let g:ctrlp_regexp = 1 " default to regexp search
-let g:ctrlp_custom_ignore = 'bower_componenets\|node_modules\|DS_Store\|git'
+let g:ctrlp_custom_ignore = '.*bower_components\|node_modules\|DS_Store\|git'
 
 "paredit
 let g:paredit_leader = '\'
@@ -303,9 +305,9 @@ augroup END
 
 " EasyAlign
 " Start interactive EasyAlign in visual mode (e.g. vipga)
-xmap ga <Plug>(EasyAlign)
+"xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
-nmap ga <Plug>(EasyAlign)
+"nmap ga <Plug>(EasyAlign)
 
 " this setting controls how long to wait (in ms) before fetching type / symbol information.
 set updatetime=500
