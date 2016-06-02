@@ -49,6 +49,7 @@ Plug 'guns/vim-sexp'
 Plug 'mattn/emmet-vim'
 
 "tpope
+Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-fireplace'
 Plug 'tpope/vim-salve'
