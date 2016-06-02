@@ -50,7 +50,7 @@ Plug 'tpope/vim-dispatch'
 Plug 'mxw/vim-jsx'
 "Plug 'unblevable/quick-scope'
 Plug 'pangloss/vim-javascript'
-Plug 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+Plug 'dracula/vim', {'as': 'dracula'}
 Plug 'majutsushi/tagbar'
 Plug 'vim-php/phpctags'
 Plug 'vim-scripts/tagbar-phpctags'
