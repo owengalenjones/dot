@@ -51,7 +51,7 @@ Plug 'mattn/emmet-vim'
 "tpope
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-fireplace'
-Plug 'tpope/vim-leiningen'
+Plug 'tpope/vim-salve'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-speeddating'
