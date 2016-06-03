@@ -20,10 +20,6 @@ Plug 'kien/ctrlp.vim'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'scrooloose/nerdtree'
 Plug 'kien/rainbow_parentheses.vim'
-Plug 'tpope/vim-fugitive'
-Plug 'kchmck/vim-coffee-script'
-Plug 'tpope/vim-fireplace'
-Plug 'tpope/vim-leiningen'
 Plug 'mileszs/ack.vim'
 Plug 'tomasr/molokai'
 Plug 'jaxbot/browserlink.vim'
@@ -34,32 +30,46 @@ Plug 'vim-scripts/utl.vim'
 Plug 'chrisbra/NrrwRgn'
 Plug 'vim-scripts/calendar.vim'
 Plug 'vim-scripts/SyntaxRange'
-Plug 'tpope/vim-speeddating'
-"Plun 'tpope/vim-endwise' screws up paredit electric return
 "Plug 'vim-scripts/paredit.vim'
 Plug 'mtth/scratch.vim'
 Plug 'leafgarland/typescript-vim'
-Plug 'tpope/vim-rails'
-Plug 'tpope/vim-bundler'
 Plug 'sheerun/vim-polyglot'
 Plug 'guns/vim-clojure-static'
 Plug 'guns/vim-clojure-highlight'
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'scrooloose/syntastic'
-Plug 'tpope/vim-dispatch'
-Plug 'mxw/vim-jsx'
 "Plug 'unblevable/quick-scope'
-Plug 'pangloss/vim-javascript'
 Plug 'dracula/vim', {'as': 'dracula'}
 Plug 'majutsushi/tagbar'
 Plug 'vim-php/phpctags'
 Plug 'vim-scripts/tagbar-phpctags'
-Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }
-Plug 'junegunn/vim-easy-align'
-Plug 'tpope/vim-sexp-mappings-for-regular-people'
+"Plug 'junegunn/vim-easy-align'
+Plug 'godlygeek/tabular'
 Plug 'guns/vim-sexp'
+Plug 'mattn/emmet-vim'
+
+"tpope
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-fireplace'
+Plug 'tpope/vim-salve'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-speeddating'
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-endwise' "screws up paredit electric return
+
+"js
+Plug 'kchmck/vim-coffee-script'
+Plug 'mxw/vim-jsx'
+Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }
+Plug 'pangloss/vim-javascript'
+Plug 'jelera/vim-javascript-syntax'
+Plug 'vim-scripts/JavaScript-Indent'
+Plug 'othree/javascript-libraries-syntax.vim'
 call plug#end()
 
 syntax enable
@@ -191,7 +201,7 @@ let g:indent_guides_space_guides = 1
 let g:ctrlp_max_files = 0
 let g:ctrlp_max_depth = 30
 let g:ctrlp_regexp = 1 " default to regexp search
-let g:ctrlp_custom_ignore = 'bower_componenets\|node_modules\|DS_Store\|git'
+let g:ctrlp_custom_ignore = '.*bower_components\|node_modules\|DS_Store\|git'
 
 "paredit
 let g:paredit_leader = '\'
@@ -303,9 +313,9 @@ augroup END
 
 " EasyAlign
 " Start interactive EasyAlign in visual mode (e.g. vipga)
-xmap ga <Plug>(EasyAlign)
+"xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
-nmap ga <Plug>(EasyAlign)
+"nmap ga <Plug>(EasyAlign)
 
 " this setting controls how long to wait (in ms) before fetching type / symbol information.
 set updatetime=500
