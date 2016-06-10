@@ -47,6 +47,7 @@ Plug 'vim-scripts/tagbar-phpctags'
 Plug 'godlygeek/tabular'
 Plug 'guns/vim-sexp'
 Plug 'mattn/emmet-vim'
+Plug 'mbbill/undotree'
 
 "tpope
 Plug 'tpope/vim-sensible'
