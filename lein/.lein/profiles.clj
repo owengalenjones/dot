@@ -1,8 +1,10 @@
 {:user
  {:plugins
-  [[lein-marginalia "0.7.1"]
-   [lein-midje "3.1.3"]
+  [[lein-marginalia "0.9.0"]
+   [lein-midje "3.2"]
    [lein-pprint "1.1.1"]
    [lein-deps-tree "0.1.2"]
-   [cider/cider-nrepl "0.11.0"]
-   [com.jakemccrary/lein-test-refresh "0.10.0"]]}}
+   [cider/cider-nrepl "0.12.0"]
+   [venantius/ultra "0.4.1"]
+   [com.jakemccrary/lein-test-refresh "0.15.0"]]}
+ :ultra {:color-scheme :solarized_dark}}
