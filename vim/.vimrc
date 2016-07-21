@@ -183,6 +183,7 @@ autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 autocmd BufNewFile,BufRead *.edn set filetype=clojure
 autocmd BufNewFile,BufRead *.hl set filetype=clojure
+autocmd BufNewFile,BufRead *.boot set filetype=clojure
 autocmd BufNewFile,BufRead *.cljs set filetype=clojure
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 autocmd BufRead,BufNewFile *.es6 setfiletype javascript
