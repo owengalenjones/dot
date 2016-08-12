@@ -60,4 +60,4 @@ if [ -d "$HOME/.sourceable" ] ; then
     source $f
   done
 fi
-export PATH=/usr/local/opt/rbenv/shims:/usr/local/opt/rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/MacGPG2/bin:/Users/owengalenjones/bin
+export PATH=/usr/local/opt/rbenv/shims:/usr/local/opt/rbenv/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/MacGPG2/bin:/Users/owengalenjones/bin
