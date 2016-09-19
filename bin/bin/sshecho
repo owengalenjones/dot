@@ -1,0 +1,1 @@
+ssh -A -i ~/.ssh/rjm_rsa echo.rjmetrics.com -l ojones
