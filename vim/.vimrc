@@ -204,6 +204,7 @@ let g:ctrlp_max_files = 0
 let g:ctrlp_max_depth = 30
 let g:ctrlp_regexp = 1 " default to regexp search
 let g:ctrlp_custom_ignore = '.*bower_components\|node_modules\|DS_Store\|git'
+let g:ctrlp_user_command = 'find %s -type f | grep -v "`cat .ctrlpignore`"'
 
 "paredit
 let g:paredit_leader = '\'

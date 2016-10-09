@@ -5,6 +5,5 @@
    [lein-pprint "1.1.1"]
    [lein-deps-tree "0.1.2"]
    [cider/cider-nrepl "0.12.0"]
-   [venantius/ultra "0.4.1"]
    [com.jakemccrary/lein-test-refresh "0.15.0"]]}
  :ultra {:color-scheme :solarized_dark}}
