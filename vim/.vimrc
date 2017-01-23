@@ -48,6 +48,7 @@ Plug 'godlygeek/tabular'
 Plug 'guns/vim-sexp'
 Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
+"Plug 'bhurlow/vim-parinfer'
 
 "tpope
 Plug 'tpope/vim-sensible'
@@ -204,7 +205,10 @@ let g:ctrlp_max_files = 0
 let g:ctrlp_max_depth = 30
 let g:ctrlp_regexp = 1 " default to regexp search
 let g:ctrlp_custom_ignore = '.*bower_components\|node_modules\|DS_Store\|git'
-let g:ctrlp_user_command = 'find %s -type f | grep -v "`cat .ctrlpignore`"'
+let g:ctrlp_working_path_mode = '' "disable CWD switching
+"let g:ctrlp_user_command = 'if [ -e ".ctrlpignore" ] ; then find %s -type f | grep -v "`cat .ctrlpignore`" ; else find %s -type f ; fi ;'
+"let g:ctrlp_user_command = 'echo $SHELL'
+"let g:ctrlp_user_command = 'find %s -type f'
 
 "paredit
 let g:paredit_leader = '\'
