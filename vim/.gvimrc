@@ -16,7 +16,7 @@ endif
 " Visual "{{{
 set guioptions-=T
 set guioptions=aAce
-set guifont=Monaco:h14
+set guifont=Monaco:h12
 set lines=55
 set columns=130
 " "}}}
