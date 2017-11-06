@@ -7,7 +7,7 @@ function! BuildYCM(info)
   " - status: 'installed', 'updated', or 'unchanged'
   " - force:  set on PlugInstall! or PlugUpdate!
   if a:info.status == 'installed' || a:info.force
-    !./install.py
+    !./install.py --tern-completer
   endif
 endfunction
 
@@ -42,7 +42,6 @@ Plug 'scrooloose/syntastic'
 Plug 'dracula/vim', {'as': 'dracula'}
 Plug 'majutsushi/tagbar'
 Plug 'vim-php/phpctags'
-Plug 'vim-scripts/tagbar-phpctags'
 "Plug 'junegunn/vim-easy-align'
 Plug 'godlygeek/tabular'
 Plug 'guns/vim-sexp'
