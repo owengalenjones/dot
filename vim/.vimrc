@@ -27,6 +27,7 @@ Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'myusuf3/numbers.vim'
 Plug 'Lokaltog/vim-easymotion'
 
+Plug 'w0rp/ale'
 Plug 'altercation/vim-colors-solarized'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'mileszs/ack.vim', { 'do': function('InstallAG') }
@@ -37,7 +38,6 @@ Plug 'vim-scripts/utl.vim'
 "Plun 'vim-scripts/taglist.vim'
 Plug 'chrisbra/NrrwRgn'
 Plug 'vim-scripts/calendar.vim'
-Plug 'vim-scripts/SyntaxRange'
 "Plug 'vim-scripts/paredit.vim'
 Plug 'mtth/scratch.vim'
 Plug 'leafgarland/typescript-vim'
@@ -45,7 +45,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'guns/vim-clojure-static'
 Plug 'guns/vim-clojure-highlight'
 Plug 'OmniSharp/omnisharp-vim'
-Plug 'scrooloose/syntastic'
 "Plug 'unblevable/quick-scope'
 Plug 'dracula/vim', {'as': 'dracula'}
 Plug 'majutsushi/tagbar'
@@ -75,9 +74,7 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'mxw/vim-jsx'
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }
 Plug 'pangloss/vim-javascript'
-Plug 'jelera/vim-javascript-syntax'
 Plug 'vim-scripts/JavaScript-Indent'
-Plug 'othree/javascript-libraries-syntax.vim'
 call plug#end()
 
 syntax enable
@@ -256,9 +253,6 @@ elseif has("gui_win32") " Running on Windows
     au GUIEnter * simalt ~x " starts gvim in maximized mode
 endif
 
-"syntastic
-let g:syntastic_cs_checkers = ['syntax', 'semantic', 'issues']
-
 let NERDTreeIgnore = ['\.pyc$']
 
 " key defs
@@ -307,7 +301,6 @@ set completeopt=longest,menuone,preview
 set splitbelow
 
 " Get Code Issues and syntax errors
-let g:syntastic_cs_checkers = ['syntax', 'semantic', 'issues']
 " If you are using the omnisharp-roslyn backend, use the following
 " let g:syntastic_cs_checkers = ['code_checker']
 
@@ -391,7 +384,6 @@ set hidden
 
 " react
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
-let g:syntastic_javascript_checkers = ['eslint']
 
 "tagbar
 nmap <F8> :TagbarToggle<CR>
