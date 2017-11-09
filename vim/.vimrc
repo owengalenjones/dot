@@ -7,21 +7,29 @@ function! BuildYCM(info)
   " - status: 'installed', 'updated', or 'unchanged'
   " - force:  set on PlugInstall! or PlugUpdate!
   if a:info.status == 'installed' || a:info.force
-    !./install.py --tern-completer
+    !./install.py --cs-completer --js-completer
+  endif
+endfunction
+
+function! InstallAg(info)
+  if a:info.status == 'installed' || a:info.force
+    !brew install ag
   endif
 endfunction
 
 call plug#begin('~/.vim/plugged')
-Plug 'altercation/vim-colors-solarized'
+Plug 'kien/ctrlp.vim'
+Plug 'fholgado/minibufexpl.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'tomasr/molokai'
+
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'myusuf3/numbers.vim'
-Plug 'fholgado/minibufexpl.vim'
-Plug 'kien/ctrlp.vim'
 Plug 'Lokaltog/vim-easymotion'
-Plug 'scrooloose/nerdtree'
+
+Plug 'altercation/vim-colors-solarized'
 Plug 'kien/rainbow_parentheses.vim'
-Plug 'mileszs/ack.vim'
-Plug 'tomasr/molokai'
+Plug 'mileszs/ack.vim', { 'do': function('InstallAG') }
 Plug 'jaxbot/browserlink.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'jceb/vim-orgmode'
@@ -90,8 +98,31 @@ map <leader>m :NERDTreeFind<CR> " find the current file in NerdTree
 "molokai
 "colorscheme molokai
 "let g:molokai_original = 1
-set t_Co=256
-colorscheme dracula
+"set t_Co=256
+"colorscheme dracula
+
+set background=dark
+let g:rehash256 = 1 " Something to do with Molokai?
+colorscheme molokai
+if !has('gui_running')
+  if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
+    set t_Co=256
+  elseif has("terminfo")
+    colorscheme default
+    set t_Co=8
+    set t_Sf=[3%p1%dm
+    set t_Sb=[4%p1%dm
+  else
+    colorscheme default
+    set t_Co=8
+    set t_Sf=[3%dm
+    set t_Sb=[4%dm
+  endif
+  " Disable Background Color Erase when within tmux - https://stackoverflow.com/q/6427650/102704
+  if $TMUX != ""
+    set t_ut=
+  endif
+endif
 
 "numbers
 let g:numbers_exclude = ['tagbar', 'gundo', 'minibufexpl', 'nerdtree']
@@ -235,6 +266,10 @@ let NERDTreeIgnore = ['\.pyc$']
 " C       = Ctrl
 " S       = Shift
 
+" ack / ag
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 
 " OmniSharp won't work without this setting
 filetype plugin on
