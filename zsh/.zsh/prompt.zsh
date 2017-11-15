@@ -14,14 +14,14 @@
 # ░▓▓▓▓▓▓▓▓▓▓
 # ░░░░░░░░░░
 
-#ICO_DIRTY="⚡"
+ICO_DIRTY="⚡"
 #ICO_DIRTY="↯"
-ICO_DIRTY="*"
-#ICO_AHEAD="↑"
-ICO_AHEAD="🠙"
+#ICO_DIRTY="*"
+ICO_AHEAD="↑"
+#ICO_AHEAD="🠙"
 #ICO_AHEAD="▲"
-#ICO_BEHIND="↓"
-ICO_BEHIND="🠛"
+ICO_BEHIND="↓"
+#ICO_BEHIND="🠛"
 #ICO_BEHIND="▼"
 ICO_DIVERGED="⥮"
 COLOR_ROOT="%F{red}"
