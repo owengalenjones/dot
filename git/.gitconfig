@@ -16,7 +16,7 @@
         branch = auto
 [core]
         excludesfile = ~/.gitignore
-        editor = /usr/local/bin/vim
+        editor = /usr/local/bin/mvim -f
 [apply]
         whitespace = nowarn
 [github]
