@@ -1,11 +1,11 @@
-#                 ██      
-#                ░██      
-#  ██████  ██████░██      
-# ░░░░██  ██░░░░ ░██████  
-#    ██  ░░█████ ░██░░░██ 
-#   ██    ░░░░░██░██  ░██ 
-#  ██████ ██████ ░██  ░██ 
-# ░░░░░░ ░░░░░░  ░░   ░░  
+#                 ██
+#                ░██
+#  ██████  ██████░██
+# ░░░░██  ██░░░░ ░██████
+#    ██  ░░█████ ░██░░░██
+#   ██    ░░░░░██░██  ░██
+#  ██████ ██████ ░██  ░██
+# ░░░░░░ ░░░░░░  ░░   ░░
 #
 #  ▓▓▓▓▓▓▓▓▓▓
 # ░▓ author ▓ xero <x@xero.nu>
@@ -27,7 +27,7 @@ ICO_DIVERGED="⥮"
 COLOR_ROOT="%F{red}"
 COLOR_USER="%F{cyan}"
 COLOR_NORMAL="%F{white}"
-PROMPT_STYLE="classic"
+PROMPT_STYLE="nogit"
 
 
 #█▓▒░ allow functions in the prompt
@@ -113,6 +113,10 @@ PROMPT='%F{white}
 dual)
 PROMPT='${USER_LEVEL}┌[${COLOR_NORMAL}%~${USER_LEVEL}]$(GIT_PROMPT)
 ${USER_LEVEL}└─ - %f'
+;;
+#!@#! nogit
+nogit)
+PROMPT='%m ${USER_LEVEL}-${COLOR_NORMAL} $(pwd) > %f'
 ;;
 #█▓▒░ classic
 *)
