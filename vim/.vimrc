@@ -11,6 +11,11 @@ function! BuildYCM(info)
   endif
 endfunction
 
+" key defs
+" Leader  = \
+" C       = Ctrl
+" S       = Shift
+
 call plug#begin('~/.vim/plugged')
 Plug 'altercation/vim-colors-solarized'
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
@@ -33,7 +38,6 @@ Plug 'vim-scripts/SyntaxRange'
 "Plug 'vim-scripts/paredit.vim'
 Plug 'mtth/scratch.vim'
 Plug 'leafgarland/typescript-vim'
-Plug 'sheerun/vim-polyglot'
 Plug 'guns/vim-clojure-static'
 Plug 'guns/vim-clojure-highlight'
 Plug 'OmniSharp/omnisharp-vim'
@@ -63,20 +67,12 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-endwise' "screws up paredit electric return
 
 "js
-Plug 'kchmck/vim-coffee-script'
 Plug 'mxw/vim-jsx'
-Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }
 Plug 'pangloss/vim-javascript'
-Plug 'jelera/vim-javascript-syntax'
-Plug 'vim-scripts/JavaScript-Indent'
-Plug 'othree/javascript-libraries-syntax.vim'
 call plug#end()
 
 syntax enable
 filetype plugin indent on    " required
-
-"polyglot
-let g:polyglot_disabled =['javascript']
 
 "nerd tree
 map <Leader>n :NERDTreeToggle<CR>
@@ -84,14 +80,14 @@ let NERDTreeShowHidden=1 " show hidden files
 map <leader>m :NERDTreeFind<CR> " find the current file in NerdTree
 
 "colors
+set t_Co=256
 "solarized
 "set background=dark
 "colorscheme solarized
 "molokai
-"colorscheme molokai
-"let g:molokai_original = 1
-set t_Co=256
-colorscheme dracula
+colorscheme molokai
+let g:molokai_original = 1
+"colorscheme dracula
 
 "numbers
 let g:numbers_exclude = ['tagbar', 'gundo', 'minibufexpl', 'nerdtree']
@@ -229,11 +225,6 @@ endif
 let g:syntastic_cs_checkers = ['syntax', 'semantic', 'issues']
 
 let NERDTreeIgnore = ['\.pyc$']
-
-" key defs
-" Leader  = \
-" C       = Ctrl
-" S       = Shift
 
 
 " OmniSharp won't work without this setting
