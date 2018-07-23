@@ -115,6 +115,11 @@ hi MBEVisibleNormal        guifg=#5DC2D6 guibg=#272822
 hi MBEVisibleChanged       guifg=#F1266F guibg=#272822
 hi MBEVisibleActiveNormal  guifg=#A6DB29 guibg=#272822
 hi MBEVisibleActiveChanged guifg=#F1266F guibg=#272822
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModSelTarget = 1
+let g:miniBufExplBRSplit = 1
 
 "youcompleteme
 " If you prefer the Omni-Completion tip window to close when a selection is
