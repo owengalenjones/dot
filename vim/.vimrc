@@ -7,7 +7,7 @@ function! BuildYCM(info)
   " - status: 'installed', 'updated', or 'unchanged'
   " - force:  set on PlugInstall! or PlugUpdate!
   if a:info.status == 'installed' || a:info.force
-    !./install.py --tern-completer
+    !python3 ./install.py --tern-completer
   endif
 endfunction
 
@@ -25,7 +25,7 @@ Plug 'Lokaltog/vim-easymotion'
 Plug 'scrooloose/nerdtree'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'mileszs/ack.vim'
-Plug 'jaxbot/browserlink.vim'
+"Plug 'jaxbot/browserlink.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'jceb/vim-orgmode'
 Plug 'vim-scripts/utl.vim'
