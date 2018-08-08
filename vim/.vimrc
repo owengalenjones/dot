@@ -7,7 +7,7 @@ function! BuildYCM(info)
   " - status: 'installed', 'updated', or 'unchanged'
   " - force:  set on PlugInstall! or PlugUpdate!
   if a:info.status == 'installed' || a:info.force
-    !./install.py --tern-completer
+    !python3 ./install.py --tern-completer
   endif
 endfunction
 
@@ -25,7 +25,7 @@ Plug 'Lokaltog/vim-easymotion'
 Plug 'scrooloose/nerdtree'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'mileszs/ack.vim'
-Plug 'jaxbot/browserlink.vim'
+"Plug 'jaxbot/browserlink.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'jceb/vim-orgmode'
 Plug 'vim-scripts/utl.vim'
@@ -115,6 +115,11 @@ hi MBEVisibleNormal        guifg=#5DC2D6 guibg=#272822
 hi MBEVisibleChanged       guifg=#F1266F guibg=#272822
 hi MBEVisibleActiveNormal  guifg=#A6DB29 guibg=#272822
 hi MBEVisibleActiveChanged guifg=#F1266F guibg=#272822
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModSelTarget = 1
+let g:miniBufExplBRSplit = 1
 
 "youcompleteme
 " If you prefer the Omni-Completion tip window to close when a selection is
