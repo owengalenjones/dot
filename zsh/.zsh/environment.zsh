@@ -18,8 +18,11 @@
 #HIST_STAMPS=mm/dd/yyyy
 
 #█▓▒░ paths
-export PATH=$HOME/bin:$HOME/Library/Python/3.7/bin:$HOME/.rbenv/shims:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:$PATH
+export PATH=$HOME/bin:$HOME/Library/Python/3.7/bin:$HOME/.rbenv/shims:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/local/opt/go@1.9/bin:$PATH
 #export MANPATH=/usr/local/man:$MANPATH
+
+#█▓▒░ GO
+export GOPATH=/usr/local/opt/go@1.9/bin/go
 
 #█▓▒░ preferred editor for local and remote sessions
 export EDITOR=vim
