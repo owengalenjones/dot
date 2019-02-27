@@ -29,6 +29,10 @@ export PATH=/usr/local/opt/go@1.9/bin:$GOPATH/bin:$PATH
 export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 
+#█▓▒░ CCX
+export STORMCLOUD="$GOPATH/src/git.corp.adobe.com/Stormcloud"
+export COURIER="$STORMCLOUD/courier"
+
 #█▓▒░ preferred editor for local and remote sessions
 export EDITOR=vim
 export VISUAL=vim
