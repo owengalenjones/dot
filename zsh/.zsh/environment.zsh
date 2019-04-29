@@ -32,6 +32,8 @@ export NVM_DIR="$HOME/.nvm"
 #█▓▒░ CCX
 export STORMCLOUD="$GOPATH/src/git.corp.adobe.com/Stormcloud"
 export COURIER="$STORMCLOUD/courier"
+export VAULT_ADDR=https://vault.or1.adobe.net/
+export ARTIFACTORY_USER=ojones
 
 #█▓▒░ preferred editor for local and remote sessions
 export EDITOR=vim
