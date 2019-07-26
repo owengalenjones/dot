@@ -18,8 +18,11 @@
 #HIST_STAMPS=mm/dd/yyyy
 
 #█▓▒░ paths
-export PATH=$HOME/bin:$HOME/Library/Python/3.7/bin:$HOME/.rbenv/shims:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:$PATH
+export PATH=$HOME/.jenv/bin:$HOME/bin:$HOME/Library/Python/3.7/bin:$HOME/.rbenv/shims:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:$PATH
 #export MANPATH=/usr/local/man:$MANPATH
+
+#█▓▒░ JAVA
+eval "$(jenv init -)"
 
 #█▓▒░ GO
 export GOPATH=~/go
