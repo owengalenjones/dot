@@ -24,13 +24,12 @@ export PATH=$HOME/.jenv/bin:$HOME/bin:$HOME/Library/Python/3.7/bin:$HOME/.rbenv/
 #█▓▒░ JAVA
 eval "$(jenv init -)"
 
+#█▓▒░ NODE
+eval "$(nodenv init -)"
+
 #█▓▒░ GO
 export GOPATH=~/go
 export PATH=/usr/local/opt/go@1.9/bin:$GOPATH/bin:$PATH
-
-#█▓▒░ NVM
-export NVM_DIR="$HOME/.nvm"
-  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 
 #█▓▒░ CCX
 export STORMCLOUD="$GOPATH/src/git.corp.adobe.com/Stormcloud"
