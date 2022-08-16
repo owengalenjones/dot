@@ -41,6 +41,9 @@ export LESSCHARSET=utf-8
 #█▓▒░ go lang
 export GOPATH=$HOME/src/go
 
+#█▓▒░ Node
+eval "$(nodenv init -)"
+
 #█▓▒░ java fixes
 export _JAVA_AWT_WM_NONREPARENTING=1
 
