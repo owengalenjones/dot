@@ -14,11 +14,12 @@
 # ░▓▓▓▓▓▓▓▓▓▓
 # ░░░░░░░░░░
 #
-#█▓▒░ history
-HISTFILE=~/.zhistory
-setopt APPEND_HISTORY
-HISTSIZE=1200
-SAVEHIST=1000
-setopt HIST_EXPIRE_DUPS_FIRST
-setopt EXTENDED_HISTORY
-setopt SHARE_HISTORY
+#█▓▒░ ssh keys
+export SSH_KEY_PATH="~/.ssh/id_rsa"
+
+#█▓▒░ funtoo keychain
+# eval `keychain -q --agents ssh,gpg --eval ~/.ssh/id_rsa 0x0DA7AB45AC1D0000`
+
+#█▓▒░ gpg agent
+GPG_TTY=$(tty)
+export GPG_TTY

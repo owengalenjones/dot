@@ -1,11 +1,11 @@
-#                 ██
-#                ░██
-#  ██████  ██████░██
-# ░░░░██  ██░░░░ ░██████
-#    ██  ░░█████ ░██░░░██
-#   ██    ░░░░░██░██  ░██
-#  ██████ ██████ ░██  ░██
-# ░░░░░░ ░░░░░░  ░░   ░░
+#                 ██      
+#                ░██      
+#  ██████  ██████░██      
+# ░░░░██  ██░░░░ ░██████  
+#    ██  ░░█████ ░██░░░██ 
+#   ██    ░░░░░██░██  ░██ 
+#  ██████ ██████ ░██  ░██ 
+# ░░░░░░ ░░░░░░  ░░   ░░  
 #
 #  ▓▓▓▓▓▓▓▓▓▓
 # ░▓ author ▓ xero <x@xero.nu>
@@ -15,7 +15,7 @@
 # ░░░░░░░░░░
 #
 #█▓▒░ source the plugin https://github.com/zsh-users/zsh-syntax-highlighting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 #█▓▒░ color overrides
 ZSH_HIGHLIGHT_STYLES[default]='none'
