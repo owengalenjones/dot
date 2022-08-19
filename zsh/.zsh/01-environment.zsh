@@ -45,6 +45,8 @@ export GOPATH=$HOME/src/go
 eval "$(nodenv init -)"
 
 #█▓▒░ java fixes
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 #█▓▒░ no mosh titles
