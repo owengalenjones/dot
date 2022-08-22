@@ -48,6 +48,7 @@ eval "$(nodenv init -)"
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 export _JAVA_AWT_WM_NONREPARENTING=1
+export JAVA_HOME="$HOME/.jenv/versions/`jenv version-name`"
 
 #█▓▒░ no mosh titles
 export MOSH_TITLE_NOPREFIX=1
