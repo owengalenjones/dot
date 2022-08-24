@@ -23,8 +23,8 @@ export MANPAGER="vim -c 'set ft=man' -"
 #export MANPATH=/usr/local/man:$MANPATH
 
 #█▓▒░ preferred text editor
-export EDITOR=vim
-export VISUAL=vim
+export EDITOR="code --wait"
+export VISUAL="code --wait"
 
 #█▓▒░ language
 export LC_COLLATE=en_US.UTF-8

@@ -1,25 +1,15 @@
-# Sample gitconfig
-#
-# This is a sample gitconfig. Usually we keep a lot of sensitive information
-# here (things like authentication tokens, email addresses, and so on), so this
-# file is ignored in this project's .gitignore.
-#
-# To set this up, rename this file to `gitconfig.symlink` and you'll be able to
-# install this to the correct location by running the project's main `rake`
-# task.
+# This is Git's per-user configuration file.
 [user]
-        name = Owen Jones
-        email = owengalenjones@gmail.com
-[color]
-        ui = true
-        status = auto
-        branch = auto
+# Please adapt and uncomment the following lines:
+	# name = owen
+	# email = ojones@adobe.com
 [core]
-        excludesfile = ~/.gitignore
-        editor = /usr/local/bin/mvim -f
-[apply]
-        whitespace = nowarn
-[github]
-        user = owengalenjones
-[mergetool]
-        keepBackup = false
+  editor = code --wait
+[diff]
+  tool = vscode
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+  tool = vscode
+[mergetool "vscode"]
+  cmd = code --wait $MERGED
