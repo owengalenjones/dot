@@ -13,3 +13,7 @@
   tool = vscode
 [mergetool "vscode"]
   cmd = code --wait $MERGED
+[url "git@git.corp.adobe.com:"]
+	insteadof = https://git.corp.adobe.com
+[safe]
+	directory = /Users/owen/src/go/courier

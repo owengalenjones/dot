@@ -22,6 +22,9 @@ export PATH=/usr/local/bin:$HOME/bin:$HOME/bin/build-wrapper-linux-x86:$HOME/.ge
 #export MANPAGER="vim -c 'set ft=man' -"
 #export MANPATH=/usr/local/man:$MANPATH
 
+#█▓▒░ VALUT
+export VAULT_ADDR=https://vault-amer.adobe.net
+
 #█▓▒░ preferred text editor
 export EDITOR="code --wait"
 export VISUAL="code --wait"
@@ -40,6 +43,8 @@ export LESSCHARSET=utf-8
 
 #█▓▒░ go lang
 export GOPATH=$HOME/src/go
+export DOCKER_BUILDKIT=0
+export COMPOSE_DOCKER_CLI_BUILD=0
 
 #█▓▒░ Node
 eval "$(nodenv init -)"
