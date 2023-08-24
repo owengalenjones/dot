@@ -52,6 +52,7 @@ eval "$(nodenv init -)"
 #█▓▒░ java fixes
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
+jenv enable-plugin export
 export _JAVA_AWT_WM_NONREPARENTING=1
 export JAVA_HOME="$HOME/.jenv/versions/`jenv version-name`"
 
